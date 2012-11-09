@@ -1,0 +1,25 @@
+<div class="box">
+  <div class="tab-header">
+    Some title goes here
+        <span class="pull-right">
+          <span class="options">
+            <a href="#"><i class="icon-cog"></i></a>
+          </span>
+        </span>
+  </div>
+  <div class="padded">
+    <% button_colors.each do |c| %>
+        <span style="margin-bottom: 10px; display: inline-block;">
+            <a href="#" class="button <%= c %>">A button</a>
+        </span>
+    <% end %>
+  </div>
+</div>
+
+<div class="box padded">
+  <% button_colors.each do |c| %>
+      <span style="margin-bottom: 10px; display: inline-block;">
+        <a href="#" class="button <%= c %> disabled">Disabled</a>
+      </span>
+  <% end %>
+</div>

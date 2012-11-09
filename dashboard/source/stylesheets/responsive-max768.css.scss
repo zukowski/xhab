@@ -1,0 +1,12 @@
+@import "compass";
+
+@media (max-width: 768px) {
+  nav#primary {
+    > ul > li {
+
+      //add these to 480 max
+      //width: 33.3%;
+      //margin-left: -3px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+<section id="docs-recent-comments">
+  <h3>Recent Comments</h3>
+
+  <p>Basically this is a new html component, so here's the structure</p>
+
+  <pre class="prettyprint">
+    <%= escape_html %(
+    <div class="black-box tex">
+      <div class="tab-header">
+        Recent comments
+      </div>
+      <ul class="recent-comments">
+
+        <li class="separator">
+          //add an avatar in the comment
+          <div class="avatar pull-left">
+            <img src"/avatar.png"/>
+          </div>
+
+          //add the actual post
+          <div class="article-post">
+            <div class="user-info"> Posted by jordan, 3 days ago </div>
+            <div class="user-content">
+              Vivamus sed auctor nibh congue, ligula vitae tempus pharetra...
+            </div>
+
+            //add comment options
+            <div class="btn-group">
+              <button class="button black mini"><i class="icon-pencil"></i> Edit</button>
+              <button class="button black mini"><i class="icon-remove"></i> Delete</button>
+              <button class="button black mini"><i class="icon-ok"></i> Approve</button>
+            </div>
+          </div>
+        </li>
+
+        ...
+
+        //add a view all button
+        <li class="separator" style="text-align: center">
+          <a href="#">View all</a>
+        </li>
+      </ul>
+    </div>) %>
+  </pre>
+
+
+
+</section>

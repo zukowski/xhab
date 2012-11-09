@@ -1,0 +1,68 @@
+<div class="tabbable black-box" style="margin-bottom: 18px;">
+
+  <div class="tab-header">
+    Some Title here
+        <span class="pull-right">
+          <span class="options">
+            <div class="btn-group">
+              <a class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></a>
+              <ul class="dropdown-menu black-box-dropdown dropdown-left">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </div>
+          </span>
+        </span>
+  </div>
+
+  <ul class="nav nav-tabs">
+    <li class=""><a href="#tab1" data-toggle="tab">Section 1</a></li>
+    <li class=""><a href="#tab2" data-toggle="tab">Section 2</a></li>
+    <li class="active"><a href="#tab3" data-toggle="tab">Section 3</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane" id="tab1">
+      <div class="padded">
+        <% button_colors.shuffle.each do |c| %>
+            <p>
+              <span style="display: inline-block; min-width: 150px;">badge color <%= c %></span>
+              <span class="badge <%= c %>">1</span>
+            </p>
+        <% end %>
+      </div>
+    </div>
+    <div class="tab-pane" id="tab2">
+      <div class="padded">
+        <% button_colors.shuffle.each do |c| %>
+            <p>
+              <span style="display: inline-block; min-width: 150px;">badge color <%= c %></span>
+              <span class="badge <%= c %>">1</span>
+            </p>
+        <% end %>
+      </div>
+    </div>
+    <div class="tab-pane active" id="tab3">
+      <div class="separator">
+        <% button_colors.shuffle.each do |c| %>
+            <p>
+              <span style="display: inline-block; min-width: 150px;">badge color <%= c %></span>
+              <span class="badge <%= c %>">1</span>
+            </p>
+        <% end %>
+      </div>
+
+      <div class="padded">
+        <div class="inner-well clearfix">
+          <b>Some option here</b>
+          <div class="pull-right">
+            <input type="checkbox" id="checky2" class="checky"/>
+            <label for="checky2" class="checky"><span></span></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

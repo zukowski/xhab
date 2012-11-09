@@ -1,0 +1,17 @@
+<div class="box padded">
+  <% button_colors.each do |c| %>
+      <div class="btn-group">
+        <button class="button <%= c %>">Action</button>
+        <button class="button <%= c %> dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </div>
+  <% end %>
+</div>

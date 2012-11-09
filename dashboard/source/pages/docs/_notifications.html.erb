@@ -1,0 +1,58 @@
+<section id="docs-notifications">
+
+  <h3>Initialization</h3>
+
+  <p>The notifications plugin uses underscore.js to render javascript templates. To use the notification system, the page must include the html templates for the notification plugin, which you'll find in the package (look for a file called notification_templates)</p>
+
+  <p>You can optionally initialize the notifications plugin on the page with a parent container and a custom class for sizing like this:</p>
+
+  <pre class="prettyprint">
+    <%= escape_html %(
+    new Notifications({
+      container: $("body"),
+      bootstrapPositionClass: "span6 offset3"
+    });) %>
+  </pre>
+
+  <p>These are actually the default options, which inject the plugin template at the beginning of the <b>container</b>, with a <b>span6 offset3</b> class for position and size. You should only initialize the plugin if the defaults don't suit your purpose</p>
+
+  <p>To push a notification, just call <code>Notifications.push</code> with the following arguments:</p>
+
+  <table class="table table-bordered">
+    <tr>
+      <td><code>imagePath</code></td>
+      <td>(optional) string</td>
+      <td>the url to your image path. use it if you want an image to the left of your notification</td>
+    </tr>
+
+    <tr>
+      <td><code>fillImage</code></td>
+      <td>(optional) boolean</td>
+      <td>defaults to false. use it if you want to expand the image in the whole assigned space, otherwise it will stay centered</td>
+    </tr>
+
+    <tr>
+      <td><code>text</code></td>
+      <td>string</td>
+      <td>the message you want inside the notification. can be a html snippet too!</td>
+    </tr>
+
+    <tr>
+      <td><code>time</code></td>
+      <td>(optional) string</td>
+      <td>can be used as a timestamp below the text</td>
+    </tr>
+
+    <tr>
+      <td><code>autoDismiss</code></td>
+      <td>(optional) integer</td>
+      <td>number of seconds after the notification automatically dismisses itself. if a dismiss count is not provided, the notification must be manually closed by the user</td>
+    </tr>
+
+    <tr>
+      <td><code>dismiss</code></td>
+      <td>(optional) function</td>
+      <td>a function that gets called after the notification is dismissed</td>
+    </tr>
+  </table>
+</section>

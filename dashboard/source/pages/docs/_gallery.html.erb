@@ -1,0 +1,41 @@
+<section id="docs-gallery">
+  <h3>Bootstrap gallery component</h3>
+
+  <p>First add a modal at the beginning of the page, right after opening the body tag</p>
+
+  <pre class="prettyprint">
+    <%= escape_html %(
+    <div id="modal-gallery" class="black-box modal modal-gallery hide fade">
+      <div class="modal-header tab-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span class="modal-title"></span>
+      </div>
+      <div class="modal-body"><div class="modal-image"></div></div>
+      <div class="modal-footer">
+        <div class="pull-left">
+          You can also change the images<br/> by scrolling the mouse wheel!
+        </div>
+        <div class="pull-right">
+          <a class="button blue modal-next">Next <i class="icon-arrow-right icon-white"></i></a>
+          <a class="button gray modal-prev"><i class="icon-arrow-left icon-white"></i> Previous</a>
+          <a class="button green modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Slideshow</a>
+          <a class="button black" target="_blank"><i class="icon-download"></i> Download</a>
+        </div>
+      </div>
+    </div>) %>
+  </pre>
+
+  <p>Then you can include your gallery of thumbnails like this</p>
+
+  <pre class="prettyprint">
+    <%= escape_html %(
+    <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+        <a title="Picture" rel="gallery" href="/gallery/large_image.png"><img class="img-polaroid" src="/gallery/thumb_image.png" /></a>
+        ...
+    </div>) %>
+  </pre>
+
+  <p>The library behind it is <a href="https://github.com/blueimp/Bootstrap-Image-Gallery" target="_blank">blueimp's bootstrap gallery</a>, so be sure to read the docs there for more info</p>
+
+
+</section>

@@ -1,0 +1,25 @@
+<section id="docs-nav-menu">
+  <h3>Nav menu</h3>
+
+  <p>Wrap boostrap's <code>nav-list</code> control in a <code>nav-menu box</code> element</p>
+  <p>You can add a <code>badge</code> in a <code>pull-right</code> element to align it to the right on a nav list row</p>
+
+  <pre class="prettyprint">
+    <%= escape_html %(
+    <div class="nav-menu box">
+      <ul class="nav nav-list">
+        <li class="active">
+          <a href="#">
+            <i class="icon-home"></i> Home
+            <span class="pull-right badge blue">1</span>
+          </a>
+        </li>
+        <li><a href="#"><i class="icon-folder-close"></i> Stuff</a></li>
+        <li class="nav-header">List header</li>
+        <li><a href="#"><i class="icon-home"></i> Home</a></li>
+      </ul>
+    </div>) %>
+  </pre>
+
+
+</section>

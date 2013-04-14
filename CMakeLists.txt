@@ -54,7 +54,7 @@ generate_messages(
 catkin_package(
   INCLUDE_DIRS include
 # LIBRARIES xhab
-  CATKIN_DEPENDS roscpp std_msgs message_generation
+  CATKIN_DEPENDS message_runtime
 # DEPENDS system_lib
 )
 

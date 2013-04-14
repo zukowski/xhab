@@ -28,6 +28,7 @@ add_message_files(
   PumpState.msg
   TableAngle.msg
   Temperature.msg
+  TrajectoryJointAngles.msg
   ValveState.msg
 )
 

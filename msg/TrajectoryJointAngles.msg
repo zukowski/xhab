@@ -1,0 +1,6 @@
+uint8 step_number
+float32 shoulder1_angle
+float32 shoulder2_angle
+float32 elbow1_angle
+float32 elbow2_angle
+float32 wrist_angle

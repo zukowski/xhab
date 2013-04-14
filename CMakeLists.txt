@@ -53,7 +53,7 @@ generate_messages(
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
   INCLUDE_DIRS include
-# LIBRARIES xhab
+  LIBRARIES xhab
   CATKIN_DEPENDS message_runtime
 # DEPENDS system_lib
 )
@@ -77,7 +77,7 @@ include_directories(include
 add_executable(mock_data src/mock_data.cpp)
 
 ## Add dependencies to the executable
-# add_dependencies(xhab_node ${PROJECT_NAME})
+add_dependencies(mock_data xhab_gencpp)
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(

@@ -3,6 +3,7 @@
 #include <math.h>
 
 #define PI 3.14
+#define LOOP_RATE 2
 
 int main(int argc, char **argv)
 {
@@ -10,16 +11,22 @@ int main(int argc, char **argv)
   ros::NodeHandle n;
 
   ros::Publisher temperature_pub = n.advertise<xhab::Temperature>("data/fluid/temperature", 100);
-  ros::Rate loop_rate(10);
+  ros::Rate loop_rate(2);
 
   float x = 0;
   int state = 1; // x is increasing
   while (ros::ok())
   {
     xhab::Temperature temperature;
+    ros::Time now = ros::Time::now();
+    
+    temperature.header.stamp = now;
     temperature.value = sin(x);
+
     ROS_INFO("%f", temperature.value);
+    
     temperature_pub.publish(temperature);
+    
     ros::spinOnce();
     loop_rate.sleep();
     

@@ -1,0 +1,65 @@
+<section id="docs-forms-textfields">
+
+  <h3>Form fill inputs</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  //add a class fill-up to a form and all inputs will span to the full width of their parent container
+  <form class="fill-up"> ... </form>) %>
+  </pre>
+
+  <h3>Classic textfield</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  <div class="input"><input type="text" placeholder="Email"></div>) %>
+  </pre>
+
+  <h3>Transparent textfield (prepended - optional)</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+    <div class="prepend-transparent">
+      <span class="add-on button">@</span><input class="input-transparent" id="prependedInput" size="16" type="text" placeholder="Username">
+    </div>) %>
+  </pre>
+
+  <h3>Transparent textfield (appended - optional)</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  <div class="append-transparent">
+    <input class="input-transparent" id="appendedInput" size="16" type="text"><span class="add-on button">.00</span>
+  </div>) %>
+  </pre>
+
+  <h3>Error textfield</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  <div class="input">
+    <input type="text" placeholder="Username" class="error">
+    <span class="input-error" data-title="please write a valid username">
+      <i class="icon-warning-sign"></i>
+    </span>
+  </div>) %>
+  </pre>
+
+  <h3>Date picker</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(<input id="datetimepicker" type="text" class="fill-up">) %>
+  </pre>
+
+  <h3>Form note</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  //small note you can use below an input for example
+  <div class="note large">
+    <i class="icon-warning-sign"></i> Warning: You have to complete all fields
+  </div>) %>
+  </pre>
+
+
+</section>

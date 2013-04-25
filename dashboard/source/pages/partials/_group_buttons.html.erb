@@ -1,0 +1,11 @@
+<div class="box padded">
+
+  <% button_colors.each do |c| %>
+      <div class="btn-group">
+        <% (1..4).each do |n| %>
+            <a href="#" class="button <%= c %>">A button</a>
+        <% end %>
+      </div>
+  <% end %>
+
+</div>

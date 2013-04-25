@@ -1,0 +1,63 @@
+<section id="docs-login-page">
+  <h3>Login/register/forgot password page</h3>
+
+  <p>This is a new html/coffeescript based component for displaying a 3-in-1 authentication page. The demo also uses the Notifications plugin to display information and error messages</p>
+
+  <p>If the login process fails, you can trigger a wobble animation by adding class <code>wobble</code> to a <code>login-wrapper animated</code> element</p>
+
+  <p>Check out the coffeescript file (or the compiled javascript one) to see how it works. It's pretty simple!</p>
+
+    <pre class="prettyprint">
+    <%= escape_html %(
+        <div class="container">
+          <div class="login-wrapper" style="margin-top: 120px">
+            <div style="text-align: center">
+              <i class="icon-magic logo-icon"></i>
+            </div>
+
+            <div id="login-manager">
+              <div id="login" class="login-wrapper animated">
+                <form action="/" method="get">
+                  <div class="input-group">
+                    <input type="text" placeholder="email" class="input-transparent" id="email" />
+                    <input type="password" placeholder="password" class="input-transparent"/>
+                  </div>
+                  <button id="login-submit" type="submit" class="login-button">Login</button>
+              </form>
+              </div>
+
+              <div id="register" class="login-wrapper animated" style="display: none;">
+                <form action="/" method="get">
+                  <div class="input-group">
+                    <input type="text" placeholder="email" class="input-transparent" />
+                    <input type="text" placeholder="first name" class="input-transparent"/>
+                    <input type="text" placeholder="last name" class="input-transparent"/>
+                    <input type="email" placeholder="confirm password" class="input-transparent"/>
+                    <input type="password" placeholder="password" class="input-transparent"/>
+                  </div>
+                  <button id="register-submit" type="submit" class="login-button">Register</button>
+                </form>
+              </div>
+
+              <div id="forgot" class="login-wrapper animated" style="display: none;">
+                <form action="/" method="get">
+                  <div class="input-group">
+                    <input type="text" placeholder="email" class="input-transparent" />
+                  </div>
+                  <button id="forgot-submit" type="submit" class="login-button">Recover</button>
+                </form>
+              </div>
+
+              <div class="inner-well" style="text-align: center; margin: 20px 0;">
+                <a href="#" id="login-link" class="button mini rounded gray"><i class="icon-signin"></i> Login</a>
+                <a href="#" id="register-link" class="button mini rounded gray"><i class="icon-plus"></i> Register</a>
+                <a href="#" id="forgot-link" class="button mini rounded gray"><i class="icon-question-sign"></i> Forgot Password?</a>
+              </div>
+            </div>
+        </div>
+      </div>)%>
+    </pre>
+
+
+
+</section>

@@ -1,0 +1,15 @@
+<div class="row-fluid">
+  <div class="box clearfix list-icons">
+    <% icons.each_slice(55).to_a.each do |icons_a| %>
+        <div class="span3">
+          <ul>
+            <% icons_a.each do |icon| %>
+                <li><i class="icon-<%= icon %>"></i> icon-<%= icon %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+  </div>
+</div>
+
+

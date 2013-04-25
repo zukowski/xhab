@@ -1,0 +1,37 @@
+<div class="row-fluid">
+
+  <div class="span3" id='external-events'>
+    <div class="nav-menu box">
+      <ul class="nav nav-list">
+        <li class="nav-header">Draggable events</li>
+
+        <% (1..5).each do |e| %>
+            <li><a class='external-event'>My Event 1</a></li>
+        <% end %>
+        <li class="hidden-option">
+          <a id="add-event" class="flat" href="#"><i class="icon-plus"></i>Create event</a>
+        </li>
+        <li style="padding: 10px 0">
+          <div class="clearfix">
+            <div class="pull-left">
+              remove after drop
+            </div>
+            <div class="pull-right" style="margin-right: 2px;">
+              <input type='checkbox' id='drop-remove' class="checky"/>
+              <label for='drop-remove' class="checky"><span></span></label>
+            </div>
+          </div>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="span9">
+    <div class="box padded">
+      <div id='calendar'></div>
+    </div>
+  </div>
+</div>
+

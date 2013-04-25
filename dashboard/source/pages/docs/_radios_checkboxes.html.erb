@@ -1,0 +1,39 @@
+<section id="docs-radios-checkboxes">
+
+  <h3>Radios</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  //add a class normal-radio to the input, and surround the input and label with a div.input
+  <div class="input">
+    <input type="radio" name="radios[]" id="rd1" class="normal-radio">
+    <label for="rd1">The number one option</label>
+  </div>) %>
+  </pre>
+
+  <h3>Checkboxes</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  //add a class normal-check to the input, and surround the input and label with a div.input
+  <div class="input">
+    <input type="checkbox" id="ch1" class="normal-check">
+    <label for="ch1">The number one option</label>
+  </div>) %>
+  </pre>
+
+  <h3>Checky Checkboxes</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  //add a class checky to the input and the label
+    <input type="checkbox" id="3W5kH" class="checky">
+    <label for="3W5kH" class="checky"><span></span></label>
+
+  //you can set a text label in a span to the left or right of the input by adding a span before/after the control like this:
+    <span class="checky-label-left">label to the left</span>
+    <span class="checky-label-right">label to the right</span>
+  ) %>
+  </pre>
+
+</section>

@@ -1,0 +1,26 @@
+<section id="docs-select-tags">
+
+  <h3>Chosen select/multiselect</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+    //the theme uses Chosen to style and enhance the select boxes. use class fill-up to go 100%, and chzn-select to activate chosen
+    //same goes for multiple="multiple"
+    <select name="city" id="city" placeholder="City" class="fill-up chzn-select">
+      <option>Seattle</option>
+      <option>Chicago</option>
+      <option>New York</option>
+    </select>) %>
+  </pre>
+
+  <h3>Tags</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  //add class tagme to a textarea to get a tags control
+  <div class="input">
+    <textarea class="tagme" placeholder="This is a textarea"></textarea>
+  </div>) %>
+  </pre>
+
+</section>

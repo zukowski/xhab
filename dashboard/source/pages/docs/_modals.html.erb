@@ -1,0 +1,27 @@
+<section id="docs-modals">
+  <h3>Modals</h3>
+
+  <p>Basically the same structure, uses <code>black-box</code> class as a base for styling, and <code>tab-header</code> class for title</p>
+
+  <pre class="prettyprint">
+    <%= escape_html %(
+    <div id="modal" class="black-box modal hide fade">
+      <div class="modal-header tab-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <span>Some modal title</span>
+      </div>
+      <div class="modal-body separator">
+        <h4>Text in a modal</h4>
+        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+      </div>
+      <div class="modal-footer">
+        <div class="inner-well">
+          <a class="button mini rounded light-gray" data-dismiss="modal">Close</a>
+          <a class="button mini rounded blue">Save changes</a>
+        </div>
+      </div>
+    </div>) %>
+  </pre>
+
+  <p>use class <code>inner-well</code> for a slick container of the buttons</p>
+</section>

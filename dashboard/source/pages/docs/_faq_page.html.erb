@@ -1,0 +1,25 @@
+<section id="docs-faq-page">
+  <h3>FAQ page</h3>
+
+  <p>This is a new html/coffeescript based component for displaying a FAQ page.</p>
+  <p>Features a live search box which can filter the questions/answers</p>
+
+  <p>Basically, just add a <code>ol</code> with some identifier, and the <code>li</code> elements should have a
+    <code>h4</code> for a question and a <code>p</code> element for the answer</p>
+
+  <p>You can add as many questions/answers you like</p>
+
+    <pre class="prettyprint">
+    <%= escape_html %(
+  <ol class="faq-list">
+    <li>
+      <h4>How do we work?</h4>
+      <p>Just fill out our briefing form. This will only take about 5 minutes. Based on that basic information, we will create a design sample in a way we feel best suits your company's focus and vision. You need not waste anymore time on meetings.</p>
+    </li>
+    ...
+  </ol>)%>
+    </pre>
+
+  <p>After the document is loaded you can call <code>new Faq($(".faq-list"))</code> and it will magically transform in a FAQ page</p>
+
+</section>

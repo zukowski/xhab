@@ -1,0 +1,83 @@
+<section id="docs-buttons-icons">
+
+  <h3>Buttons</h3>
+
+  <p>To style something as a button, use <code>class="button"</code></p>
+
+  <p>
+    Optional classes are for <b>colors</b>, and you get by default
+
+    <span style="margin-bottom: 10px; display: inline-block;">
+      <a href="#" class="button">default</a>
+    </span>
+
+    <% button_colors[1..-1].each do |c| %>
+        <span style="margin-bottom: 10px; display: inline-block;">
+          <a href="#" class="button <%= c %>"><%= c %></a>
+        </span>
+    <% end %>
+  </p>
+
+  <p>
+    Other classes you can apply:
+    <span style="margin-bottom: 10px; display: inline-block;">
+      <a href="#" class="button light-gray rounded">rounded</a>
+    </span>
+
+    <span style="margin-bottom: 10px; display: inline-block;">
+      <a href="#" class="button light-gray mini rounded">mini rounded</a>
+    </span>
+
+    <span style="margin-bottom: 10px; display: inline-block;">
+      <a href="#" class="button light-gray mini rounded inset">mini rounded inset</a>
+    </span>
+
+    <span style="margin-bottom: 10px; display: inline-block;">
+      <a href="#" class="button light-gray disabled">disabled</a>
+    </span>
+
+  </p>
+
+  <p>
+    <b>All button colors are generated via scss mixins. You can basically create a new button color by using a single color</b>
+  </p>
+
+  <h3>Dropdowns</h3>
+
+  <p>Dropdown menus have exactly the same syntax as the ones in the original bootstrap. The difference is of course that instead of
+    <code>btn</code> classes, you use the ones above. For example:</p>
+
+  <pre class="prettyprint">
+    <%= escape_html %(
+    <div class="btn-group">
+        <button class="button">Action</button>
+        <button class="button dropdown-toggle" data-toggle="dropdown">
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>) %>
+  </pre>
+
+  <p>You can use class <code>dropdown-left</code> on a button toggle to make it open in the left side of the toggle (right aligned)</p>
+
+  <h3>Button groups</h3>
+
+  <p>The button groups also have the same syntax as original bootstrap.</p>
+
+  <div class="btn-group">
+    <% (1..4).each do |n| %>
+        <a href="#" class="button">A button</a>
+    <% end %>
+  </div>
+
+  <h3>Icons</h3>
+
+  <p>This theme includes font-awesome for icons</p>
+
+</section>

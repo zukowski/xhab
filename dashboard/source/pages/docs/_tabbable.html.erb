@@ -1,0 +1,47 @@
+<section id="docs-tabbable">
+  <h3>Tabbable</h3>
+
+  <p>Add class <code>black-box</code> to a tabbable</p>
+
+  <p>This theme adds a title bar (class <code>tab-header</code>) to the original tabbable component</p>
+  <p>If you want the tabbable title bar to include a dropdown menu, the dropdown <code>ul</code> needs a <code>black-box-dropdown</code> class</p>
+  <p>You should also wrap the <code>btn-group</code> element with a span class <code>options</code></p>
+
+  <pre class="prettyprint">
+    <%= escape_html %(
+    <div class="tabbable black-box" style="margin-bottom: 18px;">
+
+      <div class="tab-header">
+        Some Title here
+            <span class="pull-right">
+              <span class="options">
+                <div class="btn-group">
+                  <a class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></a>
+                  <ul class="dropdown-menu black-box-dropdown dropdown-left">
+                    ...
+                  </ul>
+                </div>
+              </span>
+            </span>
+      </div>
+
+      <ul class="nav nav-tabs">
+        <li class=""><a href="#tab1" data-toggle="tab">Section 1</a></li>
+        <li class=""><a href="#tab2" data-toggle="tab">Section 2</a></li>
+        <li class="active"><a href="#tab3" data-toggle="tab">Section 3</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div class="padded">
+            some content goes here
+            <div class="separator"></div>
+            other content in the same tab pane
+        </div>
+      </div>
+      ....
+    </div>) %>
+  </pre>
+
+  <p>Use class <code>separator</code> to break the contents in the same pane</p>
+  <p>You can wrap content in a <code>inner-well</code> element to add some cool depth</p>
+</section>

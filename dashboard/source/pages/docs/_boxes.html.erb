@@ -1,0 +1,55 @@
+<section id="docs-boxes">
+
+  <h3>box vs black-box</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+  //you can surround anything with a div.box like this (adding class padded will add a 20px padding all sides)
+  //there are also vpadded (for vertical padding only) and hpadded (for horizontal padding only) classes to use if needed
+
+  <div class="box padded"> .. </div>
+
+  //a box can have a title
+  <div class="box">
+    <div class="tab-header">Some title</div>
+    <div class="padded"> your awesome content here </div>
+  </div>
+
+  //a title header can also have a right icon
+  <div class="tab-header">
+    Some title
+    <span class="pull-right">
+      <span class="options">
+        <a href="#"><i class="icon-cog"></i></a>
+      </span>
+    </span>
+  </div>
+
+  //a box can be dark
+  <div class="black-box padded"> .. </div>
+
+  //and have a title too
+  <div class="black-box">
+    <div class="tab-header">Some title</div>
+    <div class="padded"> some more content here </div>
+  </div>
+
+  //and even a dropdown to the right
+  <div class="tab-header">
+      <span class="pull-right">
+          <span class="options">
+            <div class="btn-group">
+              <a class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></a>
+              <ul class="dropdown-menu black-box-dropdown dropdown-left">
+                ...
+              </ul>
+            </div>
+          </span>
+      </span>
+  <div>
+
+
+  ) %>
+  </pre>
+
+</section>

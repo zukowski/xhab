@@ -1,0 +1,43 @@
+<section id="docs-breadcrumbs-search">
+
+  <h3>Top nav container</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+    //search bar and breadcrumbs sit in the top-nav
+    <div class="top-nav"> .. </div>) %>
+  </pre>
+
+  <h3>Breadcrumbs</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+    <ul class="breadcrumb">
+      <li>..</li>
+      <li class="active">..</li>
+    </ul>) %>
+  </pre>
+
+  <h3>Top bar search</h3>
+
+  <pre class="prettyprint">
+  <%= escape_html %(
+    //add search-button-bar-container
+    <div class="row-fluid search-button-bar-container">
+      <div class="span12">
+        <ul class="breadcrumb"> ... </ul>
+        <a class="search-button-trigger" href="#"><i class="icon-search"></i></a>
+      </div>
+    </div>
+
+    //note the search-bar-nav to the next container
+    <div class="row-fluid search-bar-nav">
+      <div class="span12">
+        <form>
+          <input type="text" class="search" placeholder="Search...">
+        </form>
+      </div>
+    </div>) %>
+  </pre>
+
+</section>

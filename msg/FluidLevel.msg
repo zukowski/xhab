@@ -1,3 +1,4 @@
 Header header
-uint8 id
-float32 value
+float32 top_lvl
+float32 mid_lvl
+float32 bot_lvl

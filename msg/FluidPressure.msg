@@ -1,3 +1,3 @@
 Header header
-uint8 id
-float32 value
+float32 side_pressure
+float32 back_pressure

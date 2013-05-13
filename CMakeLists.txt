@@ -20,12 +20,16 @@ find_package(catkin REQUIRED COMPONENTS roscpp std_msgs message_generation)
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
+  DcMotor.msg
   EC.msg
   FluidPressure.msg
   FluidLevel.msg
   LEDState.msg
   LinearActuatorState.msg
   PumpState.msg
+  SensorData.msg
+  Stepper_Motor.msg
+  Stop_Motor.msg
   TableAngle.msg
   Temperature.msg
   TrajectoryJointAngles.msg

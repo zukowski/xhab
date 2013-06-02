@@ -12,7 +12,6 @@ USB1 = USB2Dynamixel_Device(USBPaths[1])
 ee = Robotis_Servo( USB1, 6 )
 
 def callback(data): 
-     print 'I am in callback '
      if int(data.data) == 1:
         if ee.is_moving() == False:
            ee.init_cont_turn()

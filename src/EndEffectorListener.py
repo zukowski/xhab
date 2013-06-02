@@ -10,6 +10,13 @@ from findUSBDev import *
 USBPaths = findUSBDev()
 USB1 = USB2Dynamixel_Device(USBPaths[1])
 ee = Robotis_Servo( USB1, 6 )
+ee_mode = 1
+
+def set_ee_mode(data):
+     global ee_mode
+     ee_mode = data.data
+     if(ee_mode == 0):
+         ee.kill_cont_turn()
 
 def callback(data): 
      if int(data.data) == 1:
@@ -26,6 +33,7 @@ def callback(data):
 def endEffectorListener():
     rospy.init_node('control_receive_ee_command', anonymous=True)
     rospy.Subscriber('/control/arm/end_effector', Int32, callback)
+    rospy.Subscribter('/data/arm/end_effector_status', Int32, set_ee_mode)
     rospy.spin() 
     
 if __name__ == '__main__':

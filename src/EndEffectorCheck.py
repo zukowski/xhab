@@ -28,7 +28,8 @@ def talker():
             msg.data = 1
         rospy.loginfo(msg)
         pub.publish(msg)
-        rospy.sleep(0.25)
+        rospy.sleep(0.005)
+
 
 if __name__ == '__main__':
     try:

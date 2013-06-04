@@ -26,6 +26,7 @@ add_message_files(
   FluidLevel.msg
   LEDState.msg
   LinearActuatorState.msg
+  LinWater.msg
   PumpState.msg
   SensorData.msg
   Stepper_Motor.msg

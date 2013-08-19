@@ -1,0 +1,12 @@
+Header header
+uint8 LinActState
+uint8 LinActWaterState
+uint8 PumpState
+uint8 UpStreamValveState
+uint8 DownStreamValveState
+uint8 LED0State
+uint8 LED1State
+uint8 LED2State
+uint8 LED3State
+uint8 LED4State
+uint8 LED5State

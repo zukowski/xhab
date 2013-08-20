@@ -33,7 +33,7 @@ def callback(data):
 def endEffectorListener():
     rospy.init_node('control_receive_ee_command', anonymous=True)
     rospy.Subscriber('/control/arm/end_effector', Int32, callback)
-    rospy.Subscribter('/data/arm/end_effector_status', Int32, set_ee_mode)
+    #rospy.Subscribter('/data/arm/end_effector_status', Int32, set_ee_mode)
     rospy.spin() 
     
 if __name__ == '__main__':

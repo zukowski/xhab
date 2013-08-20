@@ -4,7 +4,7 @@ project(xhab)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-find_package(catkin REQUIRED COMPONENTS roscpp std_msgs message_generation)
+find_package(catkin REQUIRED COMPONENTS roscpp std_msgs message_generation genmsg actionlib_msgs)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -20,6 +20,8 @@ find_package(catkin REQUIRED COMPONENTS roscpp std_msgs message_generation)
 ## Generate messages in the 'msg' folder
 add_message_files(
   FILES
+  ArduinoState.msg
+  CallBack.msg
   DcMotor.msg
   EC.msg
   FluidPressure.msg
@@ -37,6 +39,13 @@ add_message_files(
   ValveState.msg
 )
 
+## Generate actions in the 'action' folder
+add_action_files(
+  DIRECTORY action
+  FILES
+  DoDishes.action
+)
+
 ## Generate services in the 'srv' folder
 # add_service_files(
 #   FILES
@@ -48,6 +57,7 @@ add_message_files(
 generate_messages(
   DEPENDENCIES
   std_msgs
+  actionlib_msgs
 )
 
 ###################################################

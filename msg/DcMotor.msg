@@ -1,3 +1,3 @@
 Header header
 uint8 direction
-uint8 mode
+float32 mode

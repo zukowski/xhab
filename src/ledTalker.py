@@ -11,7 +11,7 @@ def talker2():
     msg = LEDState()
     #while not rospy.is_shutdown():
     msg.id = 2
-    msg.value = 2
+    msg.value = 0
     #msg.direction = 1
     #msg.enable_hold = False
     #msg.steps_desired = 1000

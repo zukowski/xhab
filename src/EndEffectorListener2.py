@@ -16,6 +16,7 @@ except:
     print "No Serovs Detected"
 
 ee_mode = 1
+init_load = 0
 
 def checkStop(threadName):
      print "I spawned"
@@ -28,12 +29,14 @@ def set_ee_mode(data):
 def callback(data):
      print "In Callback"
      global ee_mode
+     global init_load
+     init_load = abs(ee.read_load())
      try:
         thread.start_new_thread(checkStop,("User Interupt Check",))
      except:
         print "Error: unable to start thread"
      ee_mode = 1
-     while ee_mode == 1:
+     while ee_mode == 1:  
          if int(data.data) == 1:
              if ee.is_moving() == False:
                ee.init_cont_turn()
@@ -45,7 +48,10 @@ def callback(data):
          else:
              ee.kill_cont_turn()
          time.sleep(0.05)
-         if(abs(ee.read_load()) > 600 and ee.is_moving()):
+         if init_load < 10:
+             init_load = abs(ee.read_load())
+         print abs(ee.read_load())
+         if(abs(ee.read_load()) > init_load + 10 and ee.is_moving()):
              ee.kill_cont_turn()
              ee_mode = 0
      print "Out of Loop"

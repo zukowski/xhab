@@ -8,19 +8,61 @@ from lib_robotis import * #loads robitis libraries for servos
 from findUSBDev import *
 from xhab.msg import DcMotor, PumpState, LEDState, LinWater, Stepper_Motor, CallBack
 
+pub = rospy.Publisher('/data/callback',CallBack)
+msg = CallBack()
 
 def callback_led(data):
-    print "LED"
+    msg.cid = data.id
+    msg.mid = data.value
+    pub.publish(msg)
+
 def callback_dc(data):
-    print "LED"
+    msg.cid = 6
+    msg.mid = 1
+    pub.publish(msg)
+    time.sleep(2)
+    msg.mid = 0
+    pub.publish(msg)
+
 def callback_lin(data):
-    print "LED"
+    msg.cid = 8
+    msg.mid = 1
+    pub.publish(msg)
+    time.sleep(2)
+    msg.mid = 0
+    pub.publish(msg)
+
 def callback_linwater(data):
-    print "LED"
+    msg.cid = 9
+    msg.mid = 1
+    pub.publish(msg)
+    time.sleep(2)
+    msg.mid = 0
+    pub.publish(msg)
+ 
 def callback_stepper(data):
-    print "LED"
+    msg.cid = 7
+    msg.mid = 1
+    pub.publish(msg)
+    time.sleep(2)
+    msg.mid = 0
+    pub.publish(msg)
+
 def callback_pump(data):
-    print "LED"
+    msg.cid = 12
+    msg.mid = data.pump_mode
+    pub.publish(msg)
+ 
+    time.sleep(1)
+
+    msg.cid = 11
+    msg.mid = data.valve_1_mode
+    pub.publish(msg)
+
+    time.sleep(1)
+    msg.mid = data.valve_2_mode
+    pub.publish(msg)
+
 def listener():
     rospy.init_node('fake_callbacks', anonymous=True)
     rospy.Subscriber('/control/led', LEDState, callback_led)

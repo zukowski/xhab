@@ -85,6 +85,7 @@ def callback_pump(data):
 
     time.sleep(1)
 
+    msg.cid = 10
     msg.mid = data.valve_2_mode
     pub.publish(msg)
 
